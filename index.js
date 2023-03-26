@@ -12,10 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 
+//Routes
 app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/dalle", dalleRoutes);
 
-//Routes
 app.get("/", async (req, res) => {
   res.send("Hello Dall-E");
 });
